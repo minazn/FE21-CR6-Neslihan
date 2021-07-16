@@ -1,19 +1,55 @@
-<h2 class="text-center mt-5">Products</h2>
+<h1>Products</h1>
 
-<div class="row travels-content" *ngFor="let product of travels">
-    <div class="col-lg-6 col-md-6 col-sm-12 description align-self-center">
-        <h3>{{ product.description }}</h3>
-        <div>
-            Destination: {{product.destination}} <br>
-            Courses: {{product.startDate}}  <br>
-            Duration: {{product.duration}}
-            <div class="d-flex justify-content-around mt-5">
-                <span>€ {{product.price}}</span>
-                <button (click)="addToCart(product)">Buy</button>
-            </div>          
+<!-- In the for-loop: If i have left_align:true in one product -> img will be on the right -->
+<div class="row content" *ngFor="let product of travels">
+    <ng-template [ngIf]="product.left_align" [ngIfElse]="none">
+        <div class="col-lg-6 col-md-6 col-sm-12 description align-self-center">
+            <h3>{{ product.description }}</h3>
+            <div>
+                Destination: {{product.destination}} <br>
+                Courses: {{product.startDate}} <br>
+                Duration: {{product.duration}}h
+                <div class="d-flex justify-content-around mt-5">
+                    <span id="price">€ {{product.price}}</span>
+                    <button (click)="addToCart(product)">Add to cart</button>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12">
-        <img src={{product.image}} alt="">
-    </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <img src={{product.image}} alt="">
+        </div>
+    </ng-template>
+    <ng-template #none>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <img src={{product.image}} alt="">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 description align-self-center">
+            <h3>{{ product.description }}</h3>
+            <div>
+                Destination: {{product.destination}} <br>
+                Courses: {{product.startDate}} <br>
+                Duration: {{product.duration}}h
+                <div class="d-flex justify-content-around mt-5">
+                    <span id="price">€ {{product.price}}</span>
+                    <button (click)="addToCart(product)">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
 </div>
+
+<!-- <div class="container">
+
+    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+
+            <p>The clickCounter is <b>GREATER </b>than 4.</p>
+
+    </ng-template>
+
+    <ng-template #none>
+
+            <p>The clickCounter is <b>NOT GREATER</b> than 4.</p>
+
+    </ng-template>
+
+</div> -->
