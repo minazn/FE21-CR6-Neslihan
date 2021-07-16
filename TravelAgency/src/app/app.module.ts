@@ -10,6 +10,7 @@ import { TravelsComponent } from './travels/travels.component';
 import { LaptopheroComponent } from './laptophero/laptophero.component';
 import { CartComponent } from './cart/cart.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BlogComponent,
     TravelsComponent,
     LaptopheroComponent,
-    CartComponent
+    CartComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
