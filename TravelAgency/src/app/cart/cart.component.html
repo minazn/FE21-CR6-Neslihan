@@ -1,7 +1,7 @@
 <h1>Cart</h1>
 
-<div class="row mt-5 cart-content">
-    <div class="col">
+<div class="row justify-content-around mt-5 cart-content">
+    <div class="col-lg-3 col-md-4 col-sm-12">
         <form [formGroup]="checkoutForm">
             <div class="mb-5">
                 <label for="name">Name</label>
@@ -19,15 +19,16 @@
 
         </form>
     </div>
-    <div class="col">
-        <div class="row cart" *ngFor="let item of items">
+    <div class="col-lg-3 col-md-4 col-sm-12">
+        <div class="cart" *ngFor="let item of items">
             <span>{{ item.description }}: </span>
             <span>{{ item.price | currency: "EUR"}}</span>
         </div>
         <hr>
+        <p *ngIf="discount>0" id="discount">Discount: {{discount}}</p>
         <p>Sum: {{total}}</p>
     </div>
-    <div class="col ms-5" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div class="col-lg-3 col-md-4 col-sm-12 ms-5" (ngSubmit)="onSubmit(checkoutForm.value)">
         <button class="button" type="submit">Purchase</button>
     </div>
 </div>
