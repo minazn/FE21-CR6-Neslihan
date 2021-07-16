@@ -1,1 +1,19 @@
-<p>travels works!</p>
+<h2 class="text-center mt-5">Products</h2>
+
+<div class="row travels-content" *ngFor="let product of travels">
+    <div class="col-lg-6 col-md-6 col-sm-12 description align-self-center">
+        <h3>{{ product.description }}</h3>
+        <div>
+            Destination: {{product.destination}} <br>
+            Courses: {{product.startDate}}  <br>
+            Duration: {{product.duration}}
+            <div class="d-flex justify-content-around mt-5">
+                <span>€ {{product.price}}</span>
+                <button>Buy</button>
+            </div>          
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <img src={{product.image}} alt="">
+    </div>
+</div>

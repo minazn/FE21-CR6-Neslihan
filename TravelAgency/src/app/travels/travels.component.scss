@@ -1,0 +1,20 @@
+
+img{
+    max-width: 100%;
+}
+
+.travels-content{
+    background-color: yellowgreen;
+    .description{
+        text-align: center;
+    }
+}
+
+// large screen
+
+@media only screen and (min-width: 600px) {
+    .travels-content {
+      width: 80%;
+      margin: 2rem auto 0 auto;
+    }
+  }
