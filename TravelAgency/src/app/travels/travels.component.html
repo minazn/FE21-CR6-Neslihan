@@ -9,7 +9,7 @@
             Duration: {{product.duration}}
             <div class="d-flex justify-content-around mt-5">
                 <span>€ {{product.price}}</span>
-                <button>Buy</button>
+                <button (click)="addToCart(product)">Buy</button>
             </div>          
         </div>
     </div>
