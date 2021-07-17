@@ -3,16 +3,35 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    min-height: 70vh;
 
-    label{
-        width: 80px;
+    form{
+        margin: 2rem 0 2rem 0;
+
+        label{
+            width: 80px;
+        }
     }
 
-    #discount{
-        color: yellowgreen;
-        font-style: italic;
-    }
-    
-    
+    .invoice{
+        margin: 2rem 0 2rem 0;
 
+        #discount{
+            color: yellowgreen;
+            font-style: italic;
+        }
+    }
+
+   button{
+       margin-bottom: 2rem;
+   }
+
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1199px){
+    .cart-content{
+        width: 90%;
+        min-height: 75vh;
+    }
 }

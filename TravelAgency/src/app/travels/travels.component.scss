@@ -22,5 +22,15 @@ img{
         color: yellowgreen;
     }
 }
- 
+
+@media only screen and (max-width: 599px){
+    img{
+        display: none;
+    }
+
+    #activitys{
+        margin: 2rem 0 2rem 0;
+    }
+
+}
 

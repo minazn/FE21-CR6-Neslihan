@@ -19,7 +19,7 @@
 
         </form>
     </div>
-    <div class="col-lg-3 col-md-4 col-sm-12">
+    <div class="col-lg-3 col-md-4 col-sm-12 invoice">
         <div class="cart" *ngFor="let item of items">
             <span>{{ item.description }}: </span>
             <span>{{ item.price | currency: "EUR"}}</span>

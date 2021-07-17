@@ -3,7 +3,7 @@
 <!-- In the for-loop: If i have left_align:true in one product -> img will be on the right -->
 <div class="row content" *ngFor="let product of travels">
     <ng-template [ngIf]="product.left_align" [ngIfElse]="none">
-        <div class="col-lg-6 col-md-6 col-sm-12 description align-self-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 description align-self-center" id="activitys">
             <h3>{{ product.description }}</h3>
             <div>
                 Destination: {{product.destination}} <br>
