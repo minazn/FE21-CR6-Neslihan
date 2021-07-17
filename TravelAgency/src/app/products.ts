@@ -7,7 +7,7 @@ export const products = [
       startDate: "Mo-Fr: 10:00",
       duration: 8,
       image: "./../../assets/IMG/surfing.jpg",
-      left_align: true
+      left_align: true //in this case, the description will display on the left, image on the right
     },{
         destination: 'SunDance Beach', 
         price: 249, 

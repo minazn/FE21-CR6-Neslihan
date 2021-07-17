@@ -26,8 +26,10 @@
 
 .flip5 { animation: flip5 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
 
-//the height of one <li> is 45px -> margin-height: 90px, and then always add 90 px to the next
-//i have 5 <li> items -> 100/5 = 20 and then add 5 to switch the margin-heigth
+//the height of one <li> is 45px -> margin-height: 2*45=90px, and then always add 90 px to the next
+//i have 5 <li> items -> 90*5 = 450
+//i have 5 <li> items and i want to split the duration (100%) in 5 equal parts
+// -> 100/5 = 20 and then 5% to switch the margin-heigth (in 5% time speed)
 @keyframes flip5 {
     0% { margin-top: -450px; }
     5% { margin-top: -360px; }
@@ -52,8 +54,6 @@
 
 @media only screen and (min-width: 1200px){
 
-#screen-height{
-
     img{
         max-width: 100%;
         height: auto;
@@ -69,40 +69,30 @@
             top: 180vh;
             right: 30%;
         }
-
     }
 }
 
-}
-
-//
 @media only screen and (min-width:600px) and (max-width: 1199px){
 
-    #screen-height{
-
-    
-        img{
-            max-width: 100%;
-            height: auto;
-        }
-    
-        #home-description{
-            p{
-                padding-top: 2rem;
-            }
-    
-            #home-btn{
-                position: absolute;
-                top: 85vh;
-                right: 20%;
-            }
-    
-        }
-    }
-    
+    img{
+        max-width: 100%;
+        height: auto;
     }
 
-    @media only screen and (max-width: 599px){
+    #home-description{
+        p{
+            padding-top: 2rem;
+        }
+
+        #home-btn{
+            position: absolute;
+            top: 85vh;
+            right: 20%;
+        }
+    }  
+}
+
+@media only screen and (max-width: 599px){
         app-laptophero{
             display: none;
         }
@@ -111,26 +101,22 @@
             display: none;
         }
 
-        #screen-height{
-            img{
-                width: 100%;
-                height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    
+        #home-description{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            p{
+                padding-top: 2rem;
             }
-        
-            #home-description{
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                p{
-                    padding-top: 2rem;
-                }
-        
-                #home-btn{
-                    padding:20px;
-                    margin-bottom:20px;
-                }
-        
+    
+            #home-btn{
+                padding:20px;
+                margin-bottom:20px;
             }
         }
-
-    }
+}
