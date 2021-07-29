@@ -1,3 +1,4 @@
+$titleFontColor: #394543;
 
 .cart-content{
     width: 70%;
@@ -5,12 +6,22 @@
     margin-right: auto;
     min-height: 70vh;
 
+    #myform{
+        border: solid $titleFontColor;
+        height: 50vh;
+        width: 40vw;
+    }
+
     form{
-        margin: 2rem 0 2rem 0;
+        margin: 2rem 0 !important;
 
         label{
             width: 80px;
         }
+        input{
+            width: 30vw;
+        }
+
     }
 
     .invoice{
@@ -24,6 +35,9 @@
 
    button{
        margin-bottom: 2rem;
+       position: relative;
+       top: 10%;
+       left: 40%;
    }
 
 
@@ -33,5 +47,33 @@
     .cart-content{
         width: 90%;
         min-height: 75vh;
+    }
+
+    button{
+        top: 5% !important;
+        left: 30% !important;
+    }
+
+    #myform{
+        width: 50vw !important;
+    }
+
+    input{
+        width: 45vw !important;
+    }
+}
+
+@media only screen and (max-width: 599px){
+    button{ 
+        top: 0 !important;
+        left: 20% !important;
+    }
+
+    #myform{
+        width: 100vw !important;
+    }
+
+    input{
+        width: 60vw !important;
     }
 }
