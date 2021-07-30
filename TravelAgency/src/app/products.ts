@@ -6,7 +6,7 @@ export const products = [
       description: 'Surf Workshop',
       startDate: "Mo-Fr: 10:00",
       duration: 8,
-      image: "./../../assets/IMG/surfing.jpg",
+      image: "assets/IMG/surfing.jpg",
       left_align: true //in this case, the description will display on the left, image on the right
     },{
         destination: 'SunDance Beach', 
@@ -14,14 +14,14 @@ export const products = [
         description: 'Windsurfing Workshop',
         startDate: "Mo-Fr: 10:00",
         duration: 8,
-        image: "./../../assets/IMG/windsurf.jpg"
+        image: "assets/IMG/windsurf.jpg"
     },{
         destination: 'DeepOcean Beach', 
         price: 429, 
         description: 'Diving Course',
         startDate: "Mo-Fr: 8:00",
         duration: 8,
-        image: "./../../assets/IMG/diver.jpg",
+        image: "assets/IMG/diver.jpg",
         left_align: true
     },{
         destination: 'Mount Lorem', 
@@ -29,14 +29,14 @@ export const products = [
         description: 'Hiking Tour',
         startDate: "Mo-Fr: 7:00",
         duration: 12,
-        image: "./../../assets/IMG/hiking.jpg"
+        image: "assets/IMG/hiking.jpg"
     },{
         destination: 'City Lorem', 
         price: 69, 
         description: 'Expose Lorem',
         startDate: "Mo-Fr: 10:00",
         duration: 5,
-        image: "./../../assets/IMG/city.jpg",
+        image: "assets/IMG/city.jpg",
         left_align: true
     }
    ];
